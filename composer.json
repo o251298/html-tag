@@ -1,0 +1,20 @@
+{
+    "name": "codehigh/html-tag",
+    "description": "Simple Html builder",
+    "require": {
+        "php": "^8.0"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Codehigh\\HtmlTag\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Oleh Hrokalo",
+            "email": "oleh.hrokalo@linemedia.com"
+        }
+    ],
+    "minimum-stability": "dev"
+}
