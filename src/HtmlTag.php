@@ -24,12 +24,23 @@ class HtmlTag
         $this->attributes = $attributes;
     }
 
+    public static function create(string $tag): HtmlTag
+    {
+        return new self($tag);
+    }
+
     /**
      * @param string[] $attributes
      */
     public function setAttributes(array $attributes): HtmlTag
     {
         $this->attributes = $attributes;
+        return $this;
+    }
+
+    public function addAttribute(string $attribute, string $value) : HtmlTag
+    {
+        $this->attributes[$attribute] = $value;
         return $this;
     }
 
@@ -57,10 +68,5 @@ class HtmlTag
             $result .= " $key='" . "$value'";
         }
         return $result;
-    }
-
-    public static function create(string $tag): HtmlTag
-    {
-        return new self($tag);
     }
 }
